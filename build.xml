@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Build file for creating Zip Archive
+-->
+<project name="sample" default="default" basedir=".">
+
+  <target name="properties">
+    <property file="build.properties" />
+	<property name="sample.name" value="script_application_builder"/>
+    <property name="build.dir" value="."/>
+    <property name="dist.dir" value="${build.dir}/dist"/>
+    <property name="zip.file"       value="${dist.dir}/${sample.name}.zip" />
+
+    <property name="webcontent.dir" value="${build.dir}/WebContent"/>
+    <property name="webinf.dir"     value="${webcontent.dir}/WEB-INF"/>
+    <property name="models.dir"     value="${webcontent.dir}/WEB-INF/models/samples"/>
+    <property name="data.dir"       value="${webcontent.dir}/WEB-INF/samples/mobile/data"/>
+    <property name="source.dir"     value="${webcontent.dir}/WEB-INF/work/source"/>
+  </target>
+
+  <target name="default" depends="properties,clean">
+    <antcall target="makezips"/>
+  </target>
+
+  <target name="clean" depends="properties">
+    <delete dir="${dist.dir}" includes="*.*"/>
+  </target>
+
+  <!--  Used to build the zip package. -->
+  <target name="makezips" depends="properties">
+    <mkdir dir="${dist.dir}" />
+
+    <zip destfile="${zip.file}">
+      <zipfileset dir="${webcontent.dir}">
+        <include name="WEB-INF/samples/scripting/**"/>
+        <include name="samples/scripting/**"/>
+        <include name="WEB-INF/builders/com/ibm/wef/samples/builders/**"/>
+        <include name="WEB-INF/builders/com/ibm/samples/builders/**"/>
+        <include name="WEB-INF/work/source/com/ibm/wef/samples/**"/>
+      </zipfileset>
+    </zip>
+
+  </target>
+
+</project>
