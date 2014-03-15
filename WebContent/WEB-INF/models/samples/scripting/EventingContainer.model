@@ -1,0 +1,68 @@
+<Model id="samples/scripting/EventingContainer"><BuilderCallList><BuilderCall id="bc4"><BuilderDefID>com.bowstreet.builders.webapp.ActionListBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="BuilderCallCategory">General</Input>
+<Input name="ReturnType">Object</Input>
+<Input name="Name">main</Input>
+<Input name="Actions"><Actions><Action><ActionType />
+<ActionName>page1</ActionName>
+</Action>
+</Actions>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc17"><BuilderDefID>com.bowstreet.builders.webapp.ImportedPageBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="BuilderCallCategory">General</Input>
+<Input name="MethodAttribute">true</Input>
+<Input name="DesignTimeImport">false</Input>
+<Input name="AbsoluteURLs">true</Input>
+<Input name="PreserveAppContext">true</Input>
+<Input name="AddBaseTag">false</Input>
+<Input name="LocalizeUrl">false</Input>
+<Input name="LocalizationVariable">LocaleInfo</Input>
+<Input name="Name">page1</Input>
+<Input name="URL">/samples/scripting/eventing_container.html</Input>
+<Input name="FullyParse">true</Input>
+<Input name="URLModification">Absolute</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc23"><BuilderDefID>com.bowstreet.builders.webapp.ModelContainerBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="LoadWhenVisible">false</Input>
+<Input name="InheritProfile">true</Input>
+<Input name="ForwardPropertyBrokerEvents">true</Input>
+<Input name="MultiInstance">true</Input>
+<Input name="PageLocation"><SimplePageLocation><Page>page1</Page>
+<NameSearch>customer_list</NameSearch>
+</SimplePageLocation>
+</Input>
+<Input name="ModelName">samples/scripting/EventingListView</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc22"><BuilderDefID>com.bowstreet.builders.webapp.ModelContainerBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="LoadWhenVisible">false</Input>
+<Input name="InheritProfile">true</Input>
+<Input name="ForwardPropertyBrokerEvents">true</Input>
+<Input name="MultiInstance">true</Input>
+<Input name="PageLocation"><SimplePageLocation><Page>page1</Page>
+<NameSearch>customer_details</NameSearch>
+</SimplePageLocation>
+</Input>
+<Input name="ModelName">samples/scripting/EventingDetails</Input>
+</Inputs>
+</BuilderCall>
+</BuilderCallList>
+<Properties><Contained>false</Contained>
+</Properties>
+<Dependencies><Dependency type="File">/samples/scripting/eventing_container.html</Dependency>
+<Dependency type="Model">samples/scripting/EventingListView</Dependency>
+<Dependency type="Model">samples/scripting/EventingDetails</Dependency>
+</Dependencies>
+<ExternalProperties><ExternalProperty id="ContainedModels">samples/scripting/EventingListView:samples/scripting/EventingDetails</ExternalProperty>
+</ExternalProperties>
+</Model>

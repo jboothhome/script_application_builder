@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<BuilderDef xmlns="http://www.bowstreet.com/2001/Schemas" id="com.ibm.samples.builders.XmlFileDataService"> 
+  <ReadableName>XML File Data Service</ReadableName> 
+  <GenHandlerClassName>com.bowstreet.builders.webapp.foundation.WebAppGenHandler</GenHandlerClassName> 
+  <HelpFile /> 
+  <RequiredFactoryVersion>7.0</RequiredFactoryVersion> 
+  <Description>Sample XML file access builder that provides CRUD access to XML file data, for developer protoyping use only - not suitable for production.</Description> 
+  <Domains> 
+    <Domain>WebApp</Domain> 
+  </Domains> 
+  <Category>Data Integration</Category> 
+  <BuilderData> 
+    <BuilderDataEntry name="BuilderClassName">com.ibm.wef.samples.builders.XmlFileDataServiceBuilder</BuilderDataEntry> 
+  </BuilderData> 
+  <CoordinatorClassName>com.ibm.wef.samples.builders.XmlFileDataServiceCoordinator</CoordinatorClassName> 
+  <InputDefinitions> 
+    <InputDefinition name="Name" base="com.bowstreet.core.Base.RestrictedBuilderName"> 
+      <Prompt>Name</Prompt> 
+      <InitialValue /> 
+      <HelpText /> 
+      <Page /> 
+      <Required>true</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+    </InputDefinition> 
+    <InputDefinition name="FileName" base="com.bowstreet.core.Base.ServableContent"> 
+      <Prompt>XML File Name</Prompt> 
+      <InitialValue /> 
+      <HelpText>Choose the XML File Name</HelpText> 
+      <Page /> 
+      <Required>true</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+    </InputDefinition> 
+    <InputDefinition name="KeyField" base="com.bowstreet.core.Base.ComboBox"> 
+      <Prompt>Key Field</Prompt> 
+      <InitialValue /> 
+      <HelpText>Select Key Field</HelpText> 
+      <Page /> 
+      <Required>true</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+      <Editor> 
+        <Argument name="width">200</Argument> 
+        <Argument name="isEditable">true</Argument> 
+      </Editor> 
+    </InputDefinition> 
+    <InputDefinition name="MakeServicePublic" base="com.bowstreet.core.Base.BooleanData"> 
+      <Prompt>Make Service Public</Prompt> 
+      <InitialValue>false</InitialValue> 
+      <HelpText>Create a public Data Service that can be used with the Service Consumer builder.</HelpText> 
+      <Page /> 
+      <Required>false</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+    </InputDefinition> 
+    <InputDefinition name="AddTestingSupport" base="com.bowstreet.core.Base.BooleanData"> 
+      <Prompt>Add Testing Support</Prompt> 
+      <InitialValue>false</InitialValue> 
+      <HelpText>Add testing support and a "main" method.</HelpText> 
+      <Page /> 
+      <Required>false</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+    </InputDefinition> 
+    <InputDefinition name="OperationNameSuffix" base="com.bowstreet.core.Base.RestrictedBuilderName"> 
+      <Prompt>Name Suffix For Operations</Prompt> 
+      <InitialValue>Row</InitialValue> 
+      <HelpText>The name to use as part of operation names, for example "Order" would generate getOrder, getOrders, etc.</HelpText> 
+      <Page /> 
+      <Required>false</Required> 
+      <Visible>true</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+      <Editor> 
+        <Argument name="width">300</Argument> 
+      </Editor> 
+    </InputDefinition> 
+    <InputDefinition name="CacheSchema" base="com.bowstreet.core.Base.BooleanData"> 
+      <Prompt>Cache Schema</Prompt> 
+      <InitialValue>false</InitialValue> 
+      <HelpText>Cache the schema of the XML file structure</HelpText> 
+      <Page /> 
+      <Required>false</Required> 
+      <Visible>false</Visible> 
+      <ProfileType>Value</ProfileType> 
+      <Callable>true</Callable> 
+    </InputDefinition> 
+  </InputDefinitions> 
+  <GroupDefinitions> 
+    <GroupDefinition id="Advanced" base="com.bowstreet.core.Base.Advanced" /> 
+  </GroupDefinitions> 
+  <PageDefinitions /> 
+</BuilderDef> 
+ 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RowSet>
+    <Row>
+        <CONTACT_NAME>Samantha Daryn</CONTACT_NAME>
+        <EMAIL>sdaryn@powerrenovations.com</EMAIL>
+        <PHONE>555-1212</PHONE>
+        <ADDRESS>Main St.</ADDRESS>
+        <CITY>Concord</CITY>
+        <COUNTRY>US</COUNTRY>
+        <CATEGORY>Work</CATEGORY>
+    </Row>
+    <Row>
+        <CONTACT_NAME>Lucille Suarez</CONTACT_NAME>
+        <EMAIL>lsuarez@powerrenovations.com</EMAIL>
+        <PHONE>456-5678</PHONE>
+        <ADDRESS>Center St.</ADDRESS>
+        <CITY>Boulder</CITY>
+        <COUNTRY>US</COUNTRY>
+        <CATEGORY>Personal</CATEGORY>
+    </Row>
+    <Row>
+        <CONTACT_NAME>Amar Srivastava</CONTACT_NAME>
+        <EMAIL>arivastava@powerrenovations.com</EMAIL>
+        <PHONE>999-8888</PHONE>
+        <ADDRESS>Mountain Rd</ADDRESS>
+        <CITY>Sydney</CITY>
+        <COUNTRY>AU</COUNTRY>
+        <CATEGORY>Work</CATEGORY>
+    </Row>
+    <Row>
+        <CONTACT_NAME>Ted Amado</CONTACT_NAME>
+        <EMAIL>tamado@powerrenovations.com</EMAIL>
+        <PHONE>987-6543</PHONE>
+        <ADDRESS>Parcel Boulevard</ADDRESS>
+        <CITY>New York</CITY>
+        <COUNTRY>US</COUNTRY>
+        <CATEGORY>Work</CATEGORY>
+    </Row>
+    <Row>
+        <CONTACT_NAME>Dan Misawa</CONTACT_NAME>
+        <EMAIL>dmisawa@powerrenovations.com</EMAIL>
+        <PHONE>444-5555</PHONE>
+        <ADDRESS>Pleasant St.</ADDRESS>
+        <CITY>Boston</CITY>
+        <COUNTRY>US</COUNTRY>
+        <CATEGORY>Personal</CATEGORY>
+    </Row>
+</RowSet>

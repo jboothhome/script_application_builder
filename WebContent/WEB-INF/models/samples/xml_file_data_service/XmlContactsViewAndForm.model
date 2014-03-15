@@ -1,0 +1,446 @@
+<Model id="samples/xml_file_data_service/XmlContactsViewAndForm"><BuilderCallList><BuilderCall id="bc7"><BuilderDefID>com.bowstreet.builders.core.Comment</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallCategory">General</Input>
+<Input name="Name">Copyright</Input>
+<Input name="BuilderCallEnabled">true</Input>
+<Input name="Comment">Licensed Materials - Property of IBM 
+5724-O03
+Copyright 2010 IBM Corp. All rights reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+The Program may contain sample source code or programs, which illustrate programming techniques. You may only copy, modify, and distribute these samples internally. These samples have not been tested under all conditions and are provided to you by IBM without obligation of support of any kind.
+
+IBM PROVIDES THESE SAMPLES "AS IS" SUBJECT TO ANY STATUTORY WARRANTIES THAT CANNOT BE EXCLUDED. IBM MAKES NO WARRANTIES OR CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT REGARDING THESE SAMPLES OR TECHNICAL SUPPORT, IF ANY.</Input>
+<Input name="BuilderCallComment">Licensed Materials - Property of IBM 
+5724-O03
+Copyright 2010 IBM Corp. All rights reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+The Program may contain sample source code or programs, which illustrate programming techniques. You may only copy, modify, and distribute these samples internally. These samples have not been tested under all conditions and are provided to you by IBM without obligation of support of any kind.
+
+IBM PROVIDES THESE SAMPLES "AS IS" SUBJECT TO ANY STATUTORY WARRANTIES THAT CANNOT BE EXCLUDED. IBM MAKES NO WARRANTIES OR CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT REGARDING THESE SAMPLES OR TECHNICAL SUPPORT, IF ANY.</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc8"><BuilderDefID>com.bowstreet.builders.core.Comment</BuilderDefID>
+<Messages />
+<Inputs><Input name="Name">Model Comment</Input>
+<Input name="BuilderCallEnabled">true</Input>
+<Input name="Comment">This model shows an example of using the XML File Data Service builder.   That builder is for prototyping and development use only, not for production.</Input>
+<Input name="BuilderCallComment">This model shows an example of using the XML File Data Service builder.   That builder is for prototyping and development use only, not for production.</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc12"><BuilderDefID>com.bowstreet.builders.webapp.Theme</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="OverrideThemeProperties">false</Input>
+<Input name="ExportThemeFile">Export Theme File</Input>
+<Input name="ThemeFile">/WEB-INF/factory/themes/clean.uitheme</Input>
+<Input name="DefaultName">clean</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc2"><BuilderDefID>com.bowstreet.builders.webapp.ServiceConsumer2Builder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseAllOperations">true</Input>
+<Input name="OverrideInputs">true</Input>
+<Input name="ProviderModel">samples/xml_file_data_service/XmlContactsProvider</Input>
+<Input name="OperationInputs"><top><InputsForOperation><Operation>createRow</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.CONTACT_NAME</Name>
+</Input>
+<Input><Name>Row.EMAIL</Name>
+</Input>
+<Input><Name>Row.PHONE</Name>
+</Input>
+<Input><Name>Row.ADDRESS</Name>
+</Input>
+<Input><Name>Row.CITY</Name>
+</Input>
+<Input><Name>Row.COUNTRY</Name>
+</Input>
+<Input><Name>Row.CATEGORY</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>deleteRow</Operation>
+<Inputs><top><Input><Name>Parameters</Name>
+</Input>
+<Input><Name>Parameters.EMAIL</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>getRow</Operation>
+<Inputs><top><Input><Name>Parameters</Name>
+</Input>
+<Input><Name>Parameters.EMAIL</Name>
+<Value>${Variables/contactsView_SelectedRowData/Row/EMAIL}</Value>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>getRows</Operation>
+<Inputs />
+</InputsForOperation>
+<InputsForOperation><Operation>searchRows</Operation>
+<Inputs><top><Input><Name>Parameters</Name>
+</Input>
+<Input><Name>Parameters.SEARCH_FIELD</Name>
+</Input>
+<Input><Name>Parameters.SEARCH_VALUE</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>updateRow</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.CONTACT_NAME</Name>
+</Input>
+<Input><Name>Row.EMAIL</Name>
+</Input>
+<Input><Name>Row.PHONE</Name>
+</Input>
+<Input><Name>Row.ADDRESS</Name>
+</Input>
+<Input><Name>Row.CITY</Name>
+</Input>
+<Input><Name>Row.COUNTRY</Name>
+</Input>
+<Input><Name>Row.CATEGORY</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+</top>
+</Input>
+<Input name="ContextVariables"><ContextVariables><ValuesForOperation><Operation>updateRow</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>searchRows</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>getRow</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>createRow</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>getRows</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>deleteRow</Operation>
+<Mappings />
+</ValuesForOperation>
+</ContextVariables>
+</Input>
+<Input name="Name">contacts</Input>
+<Input name="SelectOperations"><top><OperationSelected><Operation>createRow</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+<OperationSelected><Operation>deleteRow</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+<OperationSelected><Operation>getRow</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs
+
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>getRows</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>searchRows</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs
+
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>updateRow</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+</top>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc4"><BuilderDefID>com.bowstreet.builders.webapp.ViewAndFormBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ViewPageURL">/factory/pages/view_and_form_view.html</Input>
+<Input name="EnableDataPaging">true</Input>
+<Input name="CreateInputPage">false</Input>
+<Input name="InputPageURL">/factory/pages/view_and_form_inputform.html</Input>
+<Input name="EnableInputValidation">false</Input>
+<Input name="InputSubmitText">Submit</Input>
+<Input name="ViewPageBackButtonText">Back</Input>
+<Input name="InsertInputPage">false</Input>
+<Input name="CreateColumnLink">true</Input>
+<Input name="LinkActionChoice">dataservice</Input>
+<Input name="DetailPageURL">/factory/pages/view_and_form_view.html</Input>
+<Input name="DetailPageHTMLTemplate">/factory/html_templates/gridtable.html</Input>
+<Input name="DetailPageBackButtonText">Back</Input>
+<Input name="CreateUpdatePage">true</Input>
+<Input name="UpdateAutoInitializeData">true</Input>
+<Input name="UpdatePageURL">/factory/pages/view_and_form_inputform.html</Input>
+<Input name="EnableUpdateValidation">false</Input>
+<Input name="UpdateLinkText">Edit</Input>
+<Input name="UpdateSubmitText">Submit</Input>
+<Input name="UpdateCancelText">Cancel</Input>
+<Input name="CreateMain">true</Input>
+<Input name="ViewPageHTMLTemplate">/factory/html_templates/gridtable.html</Input>
+<Input name="InputPageHTMLTemplate">/factory/html_templates/gridtable.html</Input>
+<Input name="EnablePagingButtons">true</Input>
+<Input name="ViewMethod">DataServices/contacts/getRows</Input>
+<Input name="Name">contactsView</Input>
+<Input name="ModelName">factory/portletbase/view_and_form_base</Input>
+<Input name="SetProfiledInputValues">true</Input>
+<Input name="UniquePattern">xyzzy7</Input>
+<Input name="DetailsMethod">DataServices/contacts/getRow</Input>
+<Input name="RowsPerPage">10</Input>
+<Input name="UpdateMethod">DataServices/contacts/updateRow</Input>
+<Input name="UpdateSuccessAction">main</Input>
+<Input name="LinkColumn">CONTACT_NAME</Input>
+<Input name="UseTheme">true</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc14"><BuilderDefID>com.bowstreet.builders.webapp.TextBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="QuoteText">true</Input>
+<Input name="ReplaceContents">true</Input>
+<Input name="ReplaceTargetElement">false</Input>
+<Input name="Control">vf_header</Input>
+<Input name="PageLocation"><SimplePageLocation><Page>contactsView_ViewPage</Page>
+<NameSearch>vf_header</NameSearch>
+</SimplePageLocation>
+</Input>
+<Input name="LookupTable">None</Input>
+<Input name="HTMLAttributes"><HTMLAttributes />
+</Input>
+<Input name="Text">Contacts Sample Using XML File Data Service</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc16"><BuilderDefID>com.bowstreet.builders.webapp.DataLayoutBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseTheme">false</Input>
+<Input name="MoveLinkToListItem">false</Input>
+<Input name="AddLogging">false</Input>
+<Input name="AutomaticParentSelection">true</Input>
+<Input name="SingleField">[contactsView_ViewPage]contactsView_ViewPage/RowSet/Row</Input>
+<Input name="TemplateFile">/factory/data_layout_templates/multiline_list_layout_template.html</Input>
+<Input name="TemplateDescription">This template allows you to generate a list where each list item can contains three columns of data, and three rows. You can use this layout convert grid table style to a list layout.</Input>
+<Input name="StyleSheetFile">/factory/data_layout_templates/multiline_list_layout.css</Input>
+<Input name="LayoutFields"><top><FieldMapping><Name>left_top</Name>
+<Value>CONTACT_NAME</Value>
+<Style>wpfLargeTitleText</Style>
+</FieldMapping>
+<FieldMapping><Name>left_middle</Name>
+<Value>EMAIL</Value>
+<Style>wpfSmallItalicText</Style>
+</FieldMapping>
+<FieldMapping><Name>left_bottom</Name>
+<Value></Value>
+</FieldMapping>
+<FieldMapping><Name>center_top</Name>
+<Value>CITY</Value>
+</FieldMapping>
+<FieldMapping><Name>center_middle</Name>
+<Value>COUNTRY</Value>
+<Style>wpfSmallItalicText</Style>
+</FieldMapping>
+<FieldMapping><Name>center_bottom</Name>
+<Value></Value>
+</FieldMapping>
+<FieldMapping><Name>right_top</Name>
+<Value>PHONE</Value>
+</FieldMapping>
+<FieldMapping><Name>right_middle</Name>
+<Value>CATEGORY</Value>
+<Style>wpfSmallItalicText</Style>
+</FieldMapping>
+<FieldMapping><Name>right_bottom</Name>
+</FieldMapping>
+</top>
+</Input>
+<Input name="DefaultName">Multi-Line List</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc18"><BuilderDefID>com.bowstreet.builders.webapp.InputFormBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseTheme">true</Input>
+<Input name="InputPageURL">${Properties/bowstreet.Theme/ViewAndForm_InputPageBase}</Input>
+<Input name="EnableInputValidation">false</Input>
+<Input name="InputValidationMethodBehavior">CallAlways</Input>
+<Input name="InputSubmitText">Submit</Input>
+<Input name="CreateMain">false</Input>
+<Input name="InputPageHTMLTemplate">/factory/html_templates/gridtable.html</Input>
+<Input name="Name">create</Input>
+<Input name="InputMethod">DataServices/contacts/createRow</Input>
+<Input name="InputSuccessAction">contactsView_ShowResults</Input>
+<Input name="InputCancelText">Cancel</Input>
+<Input name="InputCancelAction">contactsView_ViewPage</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc10"><BuilderDefID>com.bowstreet.builders.webapp.pageautomation.DataFieldSettings</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="AllPages">true</Input>
+<Input name="AllPageRadio">All</Input>
+<Input name="Pages"><data />
+</Input>
+<Input name="DisplayBehavior"><top><DispInfo><Name>CONTACT_NAME</Name>
+<Label>[Contact Name]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_String</DataType>
+<LookupTable />
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>EMAIL</Name>
+<Label>[Email]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_String</DataType>
+<LookupTable />
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>PHONE</Name>
+<Label>[Phone]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_String</DataType>
+<LookupTable />
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>ADDRESS</Name>
+<Label>[Address]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_String</DataType>
+<LookupTable />
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>CITY</Name>
+<Label>[City]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_String</DataType>
+<LookupTable />
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>COUNTRY</Name>
+<Label>[Country]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_Select</DataType>
+<LookupTable>countries</LookupTable>
+<Sort>[Off]</Sort>
+</DispInfo>
+<DispInfo><Name>CATEGORY</Name>
+<Label>[Category]</Label>
+<Hide>[Do Not Change]</Hide>
+<DataType>base_RadioGroup_Horizontal</DataType>
+<LookupTable>Work,Personal</LookupTable>
+<Sort>[Off]</Sort>
+</DispInfo>
+</top>
+</Input>
+<Input name="ValidationBehavior"><top><ValidationInfo><Name>CONTACT_NAME</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>EMAIL</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>PHONE</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>ADDRESS</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>CITY</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>COUNTRY</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+<ValidationInfo><Name>CATEGORY</Name>
+<ValidationOp>[Do Not Change]</ValidationOp>
+<Required>[NotRequired]</Required>
+</ValidationInfo>
+</top>
+</Input>
+<Input name="DefaultName">All pages</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc20"><BuilderDefID>com.bowstreet.builders.webapp.ButtonBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ShowAdvancedPostActionBehaviors">false</Input>
+<Input name="PostActionBehavior">Default</Input>
+<Input name="DefaultRefreshPageLocation">false</Input>
+<Input name="ExecuteEmbeddedScripts">false</Input>
+<Input name="IncludeEmbeddedCSS">false</Input>
+<Input name="RenderOuterPage">false</Input>
+<Input name="BreakContainment">false</Input>
+<Input name="PreservePage">false</Input>
+<Input name="Control">left_bottom</Input>
+<Input name="PageLocation"><SimplePageLocation><Page>contactsView_ViewPage</Page>
+<NameSearch>create_button</NameSearch>
+</SimplePageLocation>
+</Input>
+<Input name="HTMLAttributes"><HTMLAttributes><class />
+<style />
+</HTMLAttributes>
+</Input>
+<Input name="ActionType">link</Input>
+<Input name="ActionTypeUI">MODEL_LINK</Input>
+<Input name="IsModelAction">true</Input>
+<Input name="EarlyArgumentEvaluation">true</Input>
+<Input name="Label">Add New Contact</Input>
+<Input name="Action">create_InputPage</Input>
+<Input name="ActionURL">create_InputPage</Input>
+</Inputs>
+</BuilderCall>
+</BuilderCallList>
+<Properties><Contained>false</Contained>
+</Properties>
+<Dependencies><Dependency type="Model">samples/xml_file_data_service/XmlContactsProvider</Dependency>
+<Dependency type="Model">factory/portletbase/view_and_form_base</Dependency>
+<Dependency type="File">/factory/pages/view_and_form/view.html</Dependency>
+<Dependency type="File">/factory/pages/split_pager_default_top_base.html</Dependency>
+<Dependency type="File">/factory/pages/split_pager_drop_down_bottom_base.html</Dependency>
+<Dependency type="File">/factory/html_templates/clean_themes.html</Dependency>
+<Dependency type="File">/factory/pages/view_and_form/details.html</Dependency>
+<Dependency type="File">/factory/pages/view_and_form/input.html</Dependency>
+<Dependency type="File">/factory/data_layout_templates/multiline_list_layout_template.html</Dependency>
+<Dependency type="File">/factory/data_layout_templates/multiline_list_layout.css</Dependency>
+<Dependency type="File">/factory/clientjavascript/dojo/progressindicator.js</Dependency>
+<Dependency type="File">/factory/pages/dojo_progress_indicator_base.html</Dependency>
+<Dependency type="File">/factory/images/progressindicator/spinning_spokes.gif</Dependency>
+<Dependency type="File">/factory/pages/split_pager_default.css</Dependency>
+</Dependencies>
+<ExternalProperties><ExternalProperty id="DojoEnabled">true</ExternalProperty>
+<ExternalProperty id="DojoMinVersion">1.4.3</ExternalProperty>
+<ExternalProperty id="DojoRequires">dijit.layout.ContentPane,wpf.widget.RefreshContainer,dijit.form.DropDownButton,dijit.Menu,dijit.MenuItem,dijit.form.TextBox,dijit.form.FilteringSelect,dijit.form.RadioButton</ExternalProperty>
+</ExternalProperties>
+</Model>
